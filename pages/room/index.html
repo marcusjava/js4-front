@@ -12,7 +12,10 @@
     />
     <link rel="stylesheet" href="./../../css/styles.css" />
     <script>
-      if (!window.MediaRecorder || !window.navigator.getUserMedia) {
+      if (
+        !window.MediaRecorder ||
+        !window.navigator.mediaDevices?.getUserMedia
+      ) {
         document.write(
           decodeURI(
             '%3Cscript defer src="./../../deps/polyfill.js">%3C/script>'
